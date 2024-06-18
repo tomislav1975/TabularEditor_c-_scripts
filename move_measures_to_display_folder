@@ -1,0 +1,25 @@
+// List of measure names to movevar measureNames = new List<string>
+// MOving measures into display folder
+{
+
+    "Actual Count Actual Delay Minutes YTD",
+
+    "Actual Delay Hours",
+
+    "Actual Delay Hours YTD"};
+
+// Move measures to "NOT_USED" folderforeach (var measureName in measureNames)
+
+{
+
+    var measure = Model.Tables["_measures"].Measures[measureName];
+
+    if (measure != null)
+
+    {
+
+        measure.DisplayFolder = "NOT_USED";
+
+    }
+
+}
